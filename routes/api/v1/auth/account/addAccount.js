@@ -108,8 +108,8 @@ async function getaccountObj(req,type){
     if(req.body.company) {
         newaccount.company = req.body.company
     }
-    if(req.body.IPR) {
-        newaccount.IPR = req.body.IPR
+    if(req.body.label) {
+        newaccount.label = req.body.label
     }
     if(req.body.incomeTax) {
         newaccount.incomeTax = req.body.incomeTax
