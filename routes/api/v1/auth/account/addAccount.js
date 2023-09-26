@@ -120,8 +120,8 @@ async function getaccountObj(req,type){
      if(req.body.document) {
         newaccount.document = req.body.document
     }
-    if(req.body.website) {
-        newaccount.website = req.body.website
+    if(req.body.user) {
+        newaccount.user = req.body.user
     }
     if(req.body. sourceOfFunds) {
         newaccount. sourceOfFunds = req.body. sourceOfFunds
