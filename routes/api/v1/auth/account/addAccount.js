@@ -105,8 +105,8 @@ router.delete("/deleteOne/:id",async(req,res) => {
     })
 async function getaccountObj(req,type){
     let newaccount = {}
-    if(req.body.accountName) {
-        newaccount.accountName = req.body.accountName
+    if(req.body.company) {
+        newaccount.company = req.body.company
     }
     if(req.body.IPR) {
         newaccount.IPR = req.body.IPR
