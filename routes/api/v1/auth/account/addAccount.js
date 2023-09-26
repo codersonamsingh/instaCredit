@@ -1,25 +1,25 @@
 const express = require("express");
-constCompany = require("../../../../../Models/Accounts/Company");
+constaccount = require("../../../../../Models/Accounts/account");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/account/companyValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/account/accountValidation")
 
 //CRUD = crete Read Update Delete
 
 //@type POST
-//@routes/api/v1/accounts/company/addCompany
-//@des crete Newcompany
+//@routes/api/v1/accounts/account/addaccount
+//@des crete Newaccount
 //@access public
 
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const companyObj = await getCompanyObj(req,"create")
-console.log(companyObj)
-     await new Company(companyObj)
+        const accountObj = await getaccountObj(req,"create")
+console.log(accountObj)
+     await new account(accountObj)
       .save();
       
       res.status(201).json({
-        message: "Company Added",
+        message: "account Added",
         varient : "success"
       })
 
@@ -36,27 +36,27 @@ console.log(companyObj)
 
 )
 //@type POST
-//@routes/api/v1/accounts/company/addCompany/id:
-//@des crete Updatecompany
+//@routes/api/v1/accounts/account/addaccount/id:
+//@des crete Updateaccount
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constcompanyObj = await getCompanyObj(req,"update")
+        constaccountObj = await getaccountObj(req,"update")
 
-        constcompany = awaitCompany.findOneAndUpdate(
+        constaccount = awaitaccount.findOneAndUpdate(
             {id:req.params.id},
-            {$set:CompanyObj},
+            {$set:accountObj},
             {new:true}
         )
-        if(!company){
+        if(!account){
             res.status(500).json({
-                message: "company not found",
+                message: "account not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "Company Updated Successfully",
+            message: "account Updated Successfully",
             varient : "error"
           })
      
@@ -72,22 +72,22 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/accounts//addcompany/deleteOne/id:
-//@des Deletecompany
+//@route / api/v1/accounts//addaccount/deleteOne/id:
+//@des Deleteaccount
 //@access public
 
 router.delete("/deleteOne/:id",async(req,res) => {
 
     try{
-        constcompany = awaitCompany.findIdAndRemove(req.params.id);
-        if(!company){
+        constaccount = awaitaccount.findIdAndRemove(req.params.id);
+        if(!account){
             res.status(500).json({
-                message: "company not found",
+                message: "account not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "Company Deleted Successfully",
+            message: "account Deleted Successfully",
             varient : "error"
           })
      
@@ -103,34 +103,34 @@ router.delete("/deleteOne/:id",async(req,res) => {
 
     }
     })
-async function getCompanyObj(req,type){
-    let newCompany = {}
-    if(req.body.companyName) {
-        newCompany.companyName = req.body.companyName
+async function getaccountObj(req,type){
+    let newaccount = {}
+    if(req.body.accountName) {
+        newaccount.accountName = req.body.accountName
     }
     if(req.body.IPR) {
-        newCompany.IPR = req.body.IPR
+        newaccount.IPR = req.body.IPR
     }
     if(req.body.incomeTax) {
-        newCompany.incomeTax = req.body.incomeTax
+        newaccount.incomeTax = req.body.incomeTax
     }
      if(req.body.regulator) {
-        newCompany.regulator = req.body.regulator
+        newaccount.regulator = req.body.regulator
     }
      if(req.body.gst) {
-        newCompany.gst = req.body.gst
+        newaccount.gst = req.body.gst
     }
     if(req.body.website) {
-        newCompany.website = req.body.website
+        newaccount.website = req.body.website
     }
     if(req.body. sourceOfFunds) {
-        newCompany. sourceOfFunds = req.body. sourceOfFunds
+        newaccount. sourceOfFunds = req.body. sourceOfFunds
     }
      if(req.body.openingDate) {
-        newCompany.openingDate = req.body.openingDate
+        newaccount.openingDate = req.body.openingDate
     }
    
-    return newCompany
+    return newaccount
 }
     
 module.exports = router;
