@@ -114,8 +114,8 @@ async function getaccountObj(req,type){
     if(req.body.link) {
         newaccount.link = req.body.link
     }
-     if(req.body.regulator) {
-        newaccount.regulator = req.body.regulator
+     if(req.body.link) {
+        newaccount.notes = req.body.notes
     }
      if(req.body.gst) {
         newaccount.gst = req.body.gst
