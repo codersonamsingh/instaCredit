@@ -111,8 +111,8 @@ async function getaccountObj(req,type){
     if(req.body.label) {
         newaccount.label = req.body.label
     }
-    if(req.body.incomeTax) {
-        newaccount.incomeTax = req.body.incomeTax
+    if(req.body.link) {
+        newaccount.link = req.body.link
     }
      if(req.body.regulator) {
         newaccount.regulator = req.body.regulator
