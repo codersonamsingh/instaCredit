@@ -117,8 +117,8 @@ async function getaccountObj(req,type){
      if(req.body.notes) {
         newaccount.notes = req.body.notes
     }
-     if(req.body.gst) {
-        newaccount.gst = req.body.gst
+     if(req.body.document) {
+        newaccount.document = req.body.document
     }
     if(req.body.website) {
         newaccount.website = req.body.website
