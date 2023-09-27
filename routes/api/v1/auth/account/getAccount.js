@@ -1,23 +1,23 @@
-//Read = 1. Get ALL Company , 2. get one Company by Id, 3. Search Company with note or amount
+//Read = 1. Get ALL Account , 2. get one Account by Id, 3. Search Account with note or amount
 
 const express = require("express");
-const Company = require("../../../../../Models/Accounts/Company");
+const Account = require("../../../../../Models/Accounts/Account");
 const router = express.Router();
 
 //@type Get
-//@route /api/v1/account/Company/getCompany/getAll
-//@des get all  Company
+//@route /api/v1/account/Account/getAccount/getAll
+//@des get all  Account
 //@access public
 router.get("/getAll", async(req,res) => {
 
 try{ 
     
-    const getCompany = await Company.find()
+    const getAccount = await Account.find()
 
 
      res.json({
-        data:getCompany,
-        message:"Company loaded",
+        data:getAccount,
+        message:"Account loaded",
         varient:"success"
      })
 
@@ -32,19 +32,19 @@ try{
 })
 
 //@type Get
-//@route /api/v1/account/Company/getCompany/getOne/:id
-//@des get one Company
+//@route /api/v1/account/Account/getAccount/getOne/:id
+//@des get one Account
 //@access public
 router.get("/getOne/:id", async(req,res) => {
 
     try{ 
         
-        const getCompany = await Company.findById(req.params.id)
+        const getAccount = await Account.findById(req.params.id)
     
     
          res.json({
-            data:getCompany,
-            message:"Company loaded",
+            data:getAccount,
+            message:"Account loaded",
             varient:"success"
          })
     
@@ -59,8 +59,8 @@ router.get("/getOne/:id", async(req,res) => {
     })
 
 //@type Get search
-//@route /api/v1/account/Company/getCompany/search/:seachQuery
-//@des to search Company
+//@route /api/v1/account/Account/getAccount/search/:seachQuery
+//@des to search Account
 //@access public
 router.get("/search/:searchQuery", async(req,res) => {
 
@@ -68,17 +68,17 @@ router.get("/search/:searchQuery", async(req,res) => {
         
         const searchQuery = req.params.searchQuery
 
-        const getCompany = await Company.find({
+        const getAccount = await Account.find({
             $or:[
-                {companyName: new RegExp(searchQuery, "i")},
+                {AccountName: new RegExp(searchQuery, "i")},
                 {IPR: new RegExp(searchQuery, "i")},
                 
             ]
         })
     
          res.json({
-            data:getCompany,
-            message:"Company loaded",
+            data:getAccount,
+            message:"Account loaded",
             varient:"success"
          })
     
