@@ -126,9 +126,7 @@ async function getaccountObj(req,type){
     if(req.body. date) {
         newaccount. date = req.body. date
     }
-     if(req.body.openingDate) {
-        newaccount.openingDate = req.body.openingDate
-    }
+     
    
     return newaccount
 }
