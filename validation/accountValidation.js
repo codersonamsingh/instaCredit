@@ -1,9 +1,9 @@
 const validateOnCreate = async(req,res,next) => {
 
-    if(!req.body?.accountName){
+    if(!req.body?.company){
 
        return res.status(400).json({
-            message: "accountName Required",
+            message: "company Required",
             varient: "error"
         })
     }
