@@ -14,7 +14,8 @@ const cookieSession = require("cookie-session");
 // company routes
 
 const optAuth = require("./routes/api/v1/auth/otpAuth");
-const addAccount = require("./routes/api/v1/accounts/shopkeeper/addAccount");
+const addAccount = require("./routes/api/v1/accounts/account/addAccount");
+const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 
 //passport
 // const passport = require("./services/passport")
@@ -65,6 +66,8 @@ require("./services/passport");
 //actual routes
 
 app.use("/api/v1/auth/otpAuth", optAuth);
+app.use("/api/v1/accounts/account/addAccount",addAccount)
+
 
 
 app.get("/*", function (req, res) {
