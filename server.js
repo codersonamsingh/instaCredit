@@ -14,7 +14,7 @@ const cookieSession = require("cookie-session");
 // company routes
 
 const optAuth = require("./routes/api/v1/auth/otpAuth");
-
+const addShopkeeper = require("./routes/api/v1/accounts/shopkeeper/addShopkeeper");
 
 //passport
 // const passport = require("./services/passport")
