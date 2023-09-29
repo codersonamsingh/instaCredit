@@ -1,25 +1,25 @@
 const express = require("express");
-constcompany = require("../../../../../Models/companys/company");
+constCompany = require("../../../../../Models/Companys/Company");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/company/companyValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/Company/CompanyValidation")
 
 //CRUD = crete Read Update Delete
 
 //@type POST
-//@routes/api/v1/companys/company/addcompany
-//@des crete Newcompany
+//@routes/api/v1/Companys/Company/addCompany
+//@des crete NewCompany
 //@access public
 
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const companyObj = await getcompanyObj(req,"create")
-console.log(companyObj)
-     await new company(companyObj)
+        const CompanyObj = await getCompanyObj(req,"create")
+console.log(CompanyObj)
+     await new Company(CompanyObj)
       .save();
       
       res.status(201).json({
-        message: "company Added",
+        message: "Company Added",
         varient : "success"
       })
 
@@ -36,27 +36,27 @@ console.log(companyObj)
 
 )
 //@type POST
-//@routes/api/v1/companys/company/addcompany/id:
-//@des crete Updatecompany
+//@routes/api/v1/Companys/Company/addCompany/id:
+//@des crete UpdateCompany
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constcompanyObj = await getcompanyObj(req,"update")
+        constCompanyObj = await getCompanyObj(req,"update")
 
-        constcompany = awaitcompany.findOneAndUpdate(
+        constCompany = awaitCompany.findOneAndUpdate(
             {id:req.params.id},
-            {$set:companyObj},
+            {$set:CompanyObj},
             {new:true}
         )
-        if(!company){
+        if(!Company){
             res.status(500).json({
-                message: "company not found",
+                message: "Company not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "company Updated Successfully",
+            message: "Company Updated Successfully",
             varient : "error"
           })
      
@@ -72,22 +72,22 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/companys//addcompany/deleteOne/id:
-//@des Deletecompany
+//@route / api/v1/Companys//addCompany/deleteOne/id:
+//@des DeleteCompany
 //@access public
 
 router.delete("/deleteOne/:id",async(req,res) => {
 
     try{
-        constcompany = awaitcompany.findIdAndRemove(req.params.id);
-        if(!company){
+        constCompany = awaitCompany.findIdAndRemove(req.params.id);
+        if(!Company){
             res.status(500).json({
-                message: "company not found",
+                message: "Company not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "company Deleted Successfully",
+            message: "Company Deleted Successfully",
             varient : "error"
           })
      
@@ -103,32 +103,32 @@ router.delete("/deleteOne/:id",async(req,res) => {
 
     }
     })
-async function getcompanyObj(req,type){
-    let newcompany = {}
-    if(req.body.company) {
-        newcompany.company = req.body.company
+async function getCompanyObj(req,type){
+    let newCompany = {}
+    if(req.body.Company) {
+        newCompany.Company = req.body.Company
     }
     if(req.body.label) {
-        newcompany.label = req.body.label
+        newCompany.label = req.body.label
     }
     if(req.body.link) {
-        newcompany.link = req.body.link
+        newCompany.link = req.body.link
     }
      if(req.body.notes) {
-        newcompany.notes = req.body.notes
+        newCompany.notes = req.body.notes
     }
      if(req.body.document) {
-        newcompany.document = req.body.document
+        newCompany.document = req.body.document
     }
     if(req.body.user) {
-        newcompany.user = req.body.user
+        newCompany.user = req.body.user
     }
     if(req.body. date) {
-        newcompany. date = req.body. date
+        newCompany. date = req.body. date
     }
      
    
-    return newcompany
+    return newCompany
 }
     
 module.exports = router;
