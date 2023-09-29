@@ -1,25 +1,25 @@
 const express = require("express");
-constaccount = require("../../../../../Models/Accounts/account");
+constcompany = require("../../../../../Models/companys/company");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/account/accountValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/company/companyValidation")
 
 //CRUD = crete Read Update Delete
 
 //@type POST
-//@routes/api/v1/accounts/account/addaccount
-//@des crete Newaccount
+//@routes/api/v1/companys/company/addcompany
+//@des crete Newcompany
 //@access public
 
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const accountObj = await getaccountObj(req,"create")
-console.log(accountObj)
-     await new account(accountObj)
+        const companyObj = await getcompanyObj(req,"create")
+console.log(companyObj)
+     await new company(companyObj)
       .save();
       
       res.status(201).json({
-        message: "account Added",
+        message: "company Added",
         varient : "success"
       })
 
@@ -36,27 +36,27 @@ console.log(accountObj)
 
 )
 //@type POST
-//@routes/api/v1/accounts/account/addaccount/id:
-//@des crete Updateaccount
+//@routes/api/v1/companys/company/addcompany/id:
+//@des crete Updatecompany
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constaccountObj = await getaccountObj(req,"update")
+        constcompanyObj = await getcompanyObj(req,"update")
 
-        constaccount = awaitaccount.findOneAndUpdate(
+        constcompany = awaitcompany.findOneAndUpdate(
             {id:req.params.id},
-            {$set:accountObj},
+            {$set:companyObj},
             {new:true}
         )
-        if(!account){
+        if(!company){
             res.status(500).json({
-                message: "account not found",
+                message: "company not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Updated Successfully",
+            message: "company Updated Successfully",
             varient : "error"
           })
      
@@ -72,22 +72,22 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/accounts//addaccount/deleteOne/id:
-//@des Deleteaccount
+//@route / api/v1/companys//addcompany/deleteOne/id:
+//@des Deletecompany
 //@access public
 
 router.delete("/deleteOne/:id",async(req,res) => {
 
     try{
-        constaccount = awaitaccount.findIdAndRemove(req.params.id);
-        if(!account){
+        constcompany = awaitcompany.findIdAndRemove(req.params.id);
+        if(!company){
             res.status(500).json({
-                message: "account not found",
+                message: "company not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Deleted Successfully",
+            message: "company Deleted Successfully",
             varient : "error"
           })
      
@@ -103,32 +103,32 @@ router.delete("/deleteOne/:id",async(req,res) => {
 
     }
     })
-async function getaccountObj(req,type){
-    let newaccount = {}
+async function getcompanyObj(req,type){
+    let newcompany = {}
     if(req.body.company) {
-        newaccount.company = req.body.company
+        newcompany.company = req.body.company
     }
     if(req.body.label) {
-        newaccount.label = req.body.label
+        newcompany.label = req.body.label
     }
     if(req.body.link) {
-        newaccount.link = req.body.link
+        newcompany.link = req.body.link
     }
      if(req.body.notes) {
-        newaccount.notes = req.body.notes
+        newcompany.notes = req.body.notes
     }
      if(req.body.document) {
-        newaccount.document = req.body.document
+        newcompany.document = req.body.document
     }
     if(req.body.user) {
-        newaccount.user = req.body.user
+        newcompany.user = req.body.user
     }
     if(req.body. date) {
-        newaccount. date = req.body. date
+        newcompany. date = req.body. date
     }
      
    
-    return newaccount
+    return newcompany
 }
     
 module.exports = router;
