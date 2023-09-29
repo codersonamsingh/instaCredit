@@ -106,7 +106,7 @@ router.delete("/deleteOne/:id",async(req,res) => {
 async function getCompanyObj(req,type){
     let newCompany = {}
     if(req.body.name) {
-        newCompany.Company = req.body.Company
+        newCompany.name = req.body.Company
     }
     if(req.body.label) {
         newCompany.label = req.body.label
