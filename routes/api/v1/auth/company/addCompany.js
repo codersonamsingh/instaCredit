@@ -108,7 +108,7 @@ async function getCompanyObj(req,type){
     if(req.body.name) {
         newCompany.name = req.body.name
     }
-    if(req.body.label) {
+    if(req.body.address) {
         newCompany.label = req.body.label
     }
     if(req.body.link) {
