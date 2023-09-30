@@ -120,8 +120,8 @@ async function getCompanyObj(req,type){
      if(req.body.logoUrl) {
         newCompany.logoUrl = req.body.logoUrl
     }
-    if(req.body.user) {
-        newCompany.user = req.body.user
+    if(req.body.accessGranted) {
+        newCompany.accessGranted = req.body.accessGranted
     }
     if(req.body. date) {
         newCompany. date = req.body. date
