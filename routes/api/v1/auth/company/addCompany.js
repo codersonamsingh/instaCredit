@@ -117,8 +117,8 @@ async function getCompanyObj(req,type){
      if(req.body.ownerDetails) {
         newCompany.ownerDetails = req.body.ownerDetails
     }
-     if(req.body.document) {
-        newCompany.document = req.body.document
+     if(req.body.logoUrl) {
+        newCompany.logoUrl = req.body.logoUrl
     }
     if(req.body.user) {
         newCompany.user = req.body.user
