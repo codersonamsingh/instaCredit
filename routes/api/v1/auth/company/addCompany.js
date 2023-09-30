@@ -1,16 +1,16 @@
 const express = require("express");
 constCompany = require("../../../../../Models/Companys/Company");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/Company/CompanyValidation")
+const {vali createdByOnCreate, vali createdByOnUp createdBy} = require("../../../../../validation/Company/CompanyValidation")
 
-//CRUD = crete Read Update Delete
+//CRUD = crete Read Up createdBy Delete
 
 //@type POST
 //@routes/api/v1/Companys/Company/addCompany
 //@des crete NewCompany
 //@access public
 
-router.post("/",validateOnCreate, async(req,res) =>{
+router.post("/",vali createdByOnCreate, async(req,res) =>{
 
     try{
         const CompanyObj = await getCompanyObj(req,"create")
@@ -37,14 +37,14 @@ console.log(CompanyObj)
 )
 //@type POST
 //@routes/api/v1/Companys/Company/addCompany/id:
-//@des crete UpdateCompany
+//@des crete Up createdByCompany
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constCompanyObj = await getCompanyObj(req,"update")
+        constCompanyObj = await getCompanyObj(req,"up createdBy")
 
-        constCompany = awaitCompany.findOneAndUpdate(
+        constCompany = awaitCompany.findOneAndUp createdBy(
             {id:req.params.id},
             {$set:CompanyObj},
             {new:true}
@@ -56,7 +56,7 @@ router.post("/:id",async (req,res) => {
               })
         }
         res.status(500).json({
-            message: "Company Updated Successfully",
+            message: "Company Up createdByd Successfully",
             varient : "error"
           })
      
@@ -124,7 +124,7 @@ async function getCompanyObj(req,type){
         newCompany.accessGranted = req.body.accessGranted
     }
     if(req.body.createdBy) {
-        newCompany. date = req.body. date
+        newCompany.createdBy = req.body.createdBy
     }
      
    
