@@ -16,6 +16,7 @@ const cookieSession = require("cookie-session");
 const optAuth = require("./routes/api/v1/auth/otpAuth");
 const addAccount = require("./routes/api/v1/accounts/account/addAccount");
 const getAccount = require("./routes/api/v1/accounts/account/getAccount");
+const addAccount = require("./routes/api/v1/accounts/account/Account");
 
 //passport
 // const passport = require("./services/passport")
