@@ -71,6 +71,7 @@ require("./services/passport");
 app.use("/api/v1/auth/otpAuth", optAuth);
 app.use("/api/v1/accounts/account/addAccount",addAccount)
 app.use("/api/v1/accounts/account/getAccount",getAccount)
+app.use("/api/v1/accounts/account/getAccount",getAccount)
 
 
 
