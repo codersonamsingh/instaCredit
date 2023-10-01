@@ -73,6 +73,7 @@ app.use("/api/v1/accounts/account/addAccount",addAccount)
 app.use("/api/v1/accounts/account/getAccount",getAccount)
 
 
+
 app.get("/*", function (req, res) {
   res.sendFile(
     path.join(__dirname, "./client/build/index.html"),
