@@ -73,7 +73,7 @@ app.use("/api/v1/accounts/account/addAccount",addAccount)
 app.use("/api/v1/accounts/account/getAccount",getAccount)
 app.use("/api/v1/accounts/account/addCompany",addCompany)
 app.use("/api/v1/accounts/account/addCompany",addCompany)
-
+app.use("/api/v1/accounts/account/addCompany",addCompany)
 
 
 app.get("/*", function (req, res) {
