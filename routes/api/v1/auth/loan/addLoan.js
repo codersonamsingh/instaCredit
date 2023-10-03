@@ -108,8 +108,8 @@ async function getaccountObj(req,type){
     if(req.body.company) {
         newaccount.company = req.body.company
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
     if(req.body.customer) {
         newaccount.customer = req.body.customer
@@ -120,76 +120,76 @@ async function getaccountObj(req,type){
      if(req.body.mobileNumber) {
         newaccount.mobileNumber = req.body.mobileNumber
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
-    }if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+    }if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
-    }if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+    }if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
-    }if(req.body.user) {
-        newaccount.user = req.body.user
-    }if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+    }if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+    }if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body.mobileNumberVerified) {
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }
     if(req.body. date) {
         newaccount. date = req.body. date
