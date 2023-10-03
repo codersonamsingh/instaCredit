@@ -129,8 +129,8 @@ async function getaccountObj(req,type){
     if(req.body.aadharCardNumber) {
         newaccount.aadharCardNumber = req.body.aadharCardNumber
     }
-    if(req.body. gender) {
-        newaccount. gender = req.body. gender
+    if(req.body.panCardNumber) {
+        newaccount.panCardNumber = req.body.panCardNumber
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
