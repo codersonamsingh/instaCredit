@@ -111,7 +111,7 @@ async function getaccountObj(req,type){
     if(req.body.user) {
         newaccount.user = req.body.user
     }
-    if(req.body.link) {
+    if(req.body.customer) {
         newaccount.link = req.body.link
     }
      if(req.body.notes) {
