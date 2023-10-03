@@ -117,8 +117,8 @@ async function getaccountObj(req,type){
      if(req.body.name) {
         newaccount.name = req.body.name
     }
-     if(req.body.document) {
-        newaccount.document = req.body.document
+     if(req.body.mobileNumber) {
+        newaccount.mobileNumber = req.body.mobileNumber
     }
     if(req.body.user) {
         newaccount.user = req.body.user
