@@ -123,7 +123,74 @@ async function getaccountObj(req,type){
     if(req.body.user) {
         newaccount.user = req.body.user
     }
-    
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }if(req.body.user) {
+        newaccount.user = req.body.user
+    }if(req.body.user) {
+        newaccount.user = req.body.user
+    }
+    if(req.body.user) {
+        newaccount.user = req.body.user
+    }
     if(req.body. date) {
         newaccount. date = req.body. date
     }
