@@ -6,7 +6,7 @@ const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/
 //CRUD = crete Read Update Delete
 
 //@type POST
-//@routes/api/v1/accounts/account/addaccount
+//@routes/api/v1/accounts/account/addAccount
 //@des crete Newaccount
 //@access public
 
@@ -36,7 +36,7 @@ console.log(accountObj)
 
 )
 //@type POST
-//@routes/api/v1/accounts/account/addaccount/id:
+//@routes/api/v1/accounts/account/addAccount/id:
 //@des crete Updateaccount
 //@access public
 router.post("/:id",async (req,res) => {
@@ -72,7 +72,7 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/accounts//addaccount/deleteOne/id:
+//@route / api/v1/accounts//addAccount/deleteOne/id:
 //@des Deleteaccount
 //@access public
 
