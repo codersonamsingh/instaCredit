@@ -139,7 +139,7 @@ async function getaccountObj(req,type){
         newaccount.address = req.body.address
     }
     if(req.body.postOffice) {
-        newaccount. = req.body. gender
+        newaccount.postOffice = req.body. gender
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
