@@ -136,7 +136,7 @@ async function getaccountObj(req,type){
         newaccount.dateOfBirth = req.body.dateOfBirth
     }
     if(req.body.address) {
-        newaccount. gender = req.body. gender
+        newaccount.address = req.body. gender
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
