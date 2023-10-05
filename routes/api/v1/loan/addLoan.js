@@ -153,7 +153,7 @@ async function getaccountObj(req,type){
     if(req.body.state) {
         newaccount.state = req.body.state
     }
-    if(req.body. gender) {
+    if(req.body. pinCode) {
         newaccount. gender = req.body. gender
     }
     if(req.body. gender) {
