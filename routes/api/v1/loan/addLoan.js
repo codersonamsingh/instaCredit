@@ -156,8 +156,8 @@ async function getaccountObj(req,type){
     if(req.body.pinCode) {
         newaccount.pinCode = req.body.pinCode
     }
-    if(req.body.  loanNo) {
-        newaccount.  loanNo = req.body. gender
+    if(req.body.loanNo) {
+        newaccount.loanNo = req.body.loanNo
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
