@@ -145,7 +145,7 @@ async function getaccountObj(req,type){
         newaccount.block = req.body.block
     }
     if(req.body.village) {
-        newaccount. gender = req.body. gender
+        newaccount.village = req.body.village
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
