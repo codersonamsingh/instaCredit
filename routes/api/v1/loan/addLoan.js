@@ -147,8 +147,8 @@ async function getaccountObj(req,type){
     if(req.body.village) {
         newaccount.village = req.body.village
     }
-    if(req.body. gender) {
-        newaccount. gender = req.body. gender
+    if(req.body.district) {
+        newaccount.district = req.body.district
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
