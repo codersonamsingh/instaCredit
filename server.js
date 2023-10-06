@@ -9,10 +9,8 @@ const path = require("path");
 require("dotenv/config");
 
 const cookieSession = require("cookie-session");
-
-//bring all routes
 // company routes
-
+//bring all routes
 const optAuth = require("./routes/api/v1/auth/otpAuth");
 
 const addAccount = require("./routes/api/v1/accounts/account/addAccount");
@@ -66,7 +64,7 @@ require("./strategies/jsonwtStrategy")(passport);
 require("./services/passport");
 
 //actual routes
-
+//call all route
 app.use("/api/v1/auth/otpAuth", optAuth);
 app.use("/api/v1/accounts/account/addAccount",addAccount)
 app.use("/api/v1/accounts/account/getAccount",getAccount)
