@@ -166,7 +166,7 @@ async function getaccountObj(req,type){
         newaccount.amountFinanced = req.body.amountFinanced
     }
     if(req.body.emiAmount) {
-        newaccount.emiAmount = req.body. gender
+        newaccount.emiAmount = req.body.emiAmount
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender   
