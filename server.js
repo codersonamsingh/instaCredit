@@ -40,24 +40,9 @@ require("./strategies/jsonwtStrategy")(passport)
 
 
 //call all route
-app.use("/api/v1/accounts/account/addaccount",addaccount);
-app.use("/api/v1/accounts/account/getaccount",getaccount)
-app.use("/api/v1/accounts/receipt/addReceip",addReceipt)
-app.use("/api/v1/accounts/receipt/getReceip",getReceipt)
-app.use("/api/v1/accounts/document/addDocument",addDocument)
-app.use("/api/v1/accounts/document/getDocument",getDocument)
-app.use("/api/v1/accounts/hostel/addHostel",addHostel)
-app.use("/api/v1/accounts/hostel/getHostel",getHostel)
-app.use("/api/v1/accounts/hospital/addHospital",addHospital)
-app.use("/api/v1/accounts/hospital/getHospital",getHospital)
-app.use("/api/v1/accounts/office/addOffice",addOffice)
-app.use("/api/v1/accounts/office/getOffice",getOffice)
-app.use("/api/v1/accounts/collage/addCollage",addCollage)
-app.use("/api/v1/accounts/collage/getCollage",getCollage)
-app.use("/api/v1/accounts/school/addSchool",addSchool)
-app.use("/api/v1/accounts/school/getSchool",getSchool)
-app.use("/api/v1/accounts/shopkeeper/addShopkeeper",addShopkeeper)
-app.use("/api/v1/accounts/shopkeeper/getShopkeeper",getShopkeeper)
+app.use("/api/v1/accounts/account/addAccount",addAccount);
+app.use("/api/v1/accounts/account/getAccount",getAccount)
+
 
 
 //data base connection
