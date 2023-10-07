@@ -177,7 +177,7 @@ async function getaccountObj(req,type){
     if(req.body.interestRate) {
         newaccount.interestRate = req.body.interestRate
     }
-    if(req.body. gender) {
+    if(req.body.processingFee) {
         newaccount. gender = req.body. gender
     }
     if(req.body. gender) {
