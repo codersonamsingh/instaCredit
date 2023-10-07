@@ -174,7 +174,7 @@ async function getaccountObj(req,type){
     if(req.body.emiFrequency) {
         newaccount.emiFrequency = req.body. gender
     }
-    if(req.body. gender) {
+    if(req.body.interestRate) {
         newaccount. gender = req.body. gender
     }if(req.body. gender) {
         newaccount. gender = req.body. gender
