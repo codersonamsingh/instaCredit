@@ -4,7 +4,6 @@ const router = express.Router();
 const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/account/accountValidation")
 
 //CRUD = crete Read Update Delete
-
 //@type POST
 //@routes/api/v1/accounts/account/addAccount
 //@des crete Newaccount
@@ -30,10 +29,7 @@ console.log(accountObj)
         varient : "error"
       })
     }
-    
-
 }
-
 )
 //@type POST
 //@routes/api/v1/accounts/account/addAccount/id:
@@ -123,7 +119,7 @@ async function getaccountObj(req,type){
     if(req.body.user) {
         newaccount.user = req.body.user
     }
-    if(req.body. date) {
+    if(req.body.date) {
         newaccount. date = req.body. date
     }
      
