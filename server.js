@@ -11,13 +11,8 @@ const upload = require("express-fileupload")
 const addAccount = require("./routes/api/v1/accounts/account/addAccount");
 const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 
-
-
-
 const app = express();
 app.use(upload({useTempfiles:true}))
-
-
 
 //configure middleware
 app.use(express.urlencoded({extended:true,limit:"50mb"}));
@@ -37,13 +32,9 @@ app.use(passport.session());
 require("./Models/User")
 require("./strategies/jsonwtStrategy")(passport)
 
-
-
 //call all route
 app.use("/api/v1/accounts/account/addAccount",addAccount);
 app.use("/api/v1/accounts/account/getAccount",getAccount)
-
-
 
 //data base connection
 const db = require("./setup/myurl").mongoURL;
