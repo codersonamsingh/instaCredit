@@ -1,89 +1,86 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyparser = require("body-parser");
-const passport = require("passport");
-const upload = require("express-fileupload");
-const cors = require("cors");
+const express = require("express")
+const bodyparser = require("body-parser")
 const path = require("path");
-
-require("dotenv/config");
-
+const cors = require("cors");
+const passport = require("passport");
 const cookieSession = require("cookie-session");
-// company routes
-//bring all routes
-const optAuth = require("./routes/api/v1/auth/otpAuth");
+const mongoose = require("mongoose");
+const upload = require("express-fileupload")
 
+//bring all route
 const addAccount = require("./routes/api/v1/accounts/account/addAccount");
 const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 
 
-//passport
-// const passport = require("./services/passport")
-const app = express();
-//cookie
-app.use(
-  cookieSession({
-    maxAge: 24 * 60 * 60 * 1000,
-    keys: ["akjsdfkjk"],
-  })
-);
 
-//initialise passport
+
+const app = express();
+app.use(upload({useTempfiles:true}))
+
+
+
+//configure middleware
+app.use(express.urlencoded({extended:true,limit:"50mb"}));
+app.use(bodyparser.json({limit:"50mb"}));
+app.use(express.static(path.join(__dirname,"client/build")));
+
+//passport setup session
+app.use(cookieSession({
+    maxAge:24 * 60 * 60 * 1000,
+    keys:['asdflkjhg']
+}))
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(upload({ useTempFiles: true }));
-app.use(cors());
+//passport strategy
+require("./Models/User")
+require("./strategies/jsonwtStrategy")(passport)
 
-//Middleware for bodyparser
-app.use(express.urlencoded({ extended: true, limit: "50mb" }));
-app.use(bodyparser.json({ limit: "50mb" }));
-app.use(express.static(path.join(__dirname, "client/build")));
 
-//mongoDB configuration
+
+//call all route
+app.use("/api/v1/accounts/account/addaccount",addaccount);
+app.use("/api/v1/accounts/account/getaccount",getaccount)
+app.use("/api/v1/accounts/receipt/addReceip",addReceipt)
+app.use("/api/v1/accounts/receipt/getReceip",getReceipt)
+app.use("/api/v1/accounts/document/addDocument",addDocument)
+app.use("/api/v1/accounts/document/getDocument",getDocument)
+app.use("/api/v1/accounts/hostel/addHostel",addHostel)
+app.use("/api/v1/accounts/hostel/getHostel",getHostel)
+app.use("/api/v1/accounts/hospital/addHospital",addHospital)
+app.use("/api/v1/accounts/hospital/getHospital",getHospital)
+app.use("/api/v1/accounts/office/addOffice",addOffice)
+app.use("/api/v1/accounts/office/getOffice",getOffice)
+app.use("/api/v1/accounts/collage/addCollage",addCollage)
+app.use("/api/v1/accounts/collage/getCollage",getCollage)
+app.use("/api/v1/accounts/school/addSchool",addSchool)
+app.use("/api/v1/accounts/school/getSchool",getSchool)
+app.use("/api/v1/accounts/shopkeeper/addShopkeeper",addShopkeeper)
+app.use("/api/v1/accounts/shopkeeper/getShopkeeper",getShopkeeper)
+
+
+//data base connection
 const db = require("./setup/myurl").mongoURL;
 
-//Attempt to connect to database
 mongoose
-  .connect(db, {
-    useFindAndModify: false,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log(" MongoDB connected successfully"))
-  .catch((err) => console.log(err));
+.connect(db, {useNewUrlParser:true, useUnifiedTopology:true})
+.then(() => console.log("MongoDb connected"))
+.catch(Err => console.log(Err))
 
-//import models
-require("./models/User");
+app.get("/*",function(req,res){
+    res.sendFile(
+        path.join(__dirname,"./client/build/index.html"),
+        function(err){
+            res.status(500).send(err);
+        }
+    )
+})
 
-//Passport middleware
-app.use(passport.initialize());
+//setup server listiening
 
-//Config for JWT strategy
-require("./strategies/jsonwtStrategy")(passport);
-require("./services/passport");
+const port = process.env.PORT ||2050;
 
-//actual routes
-//call all route
-app.use("/api/v1/auth/otpAuth", optAuth);
-app.use("/api/v1/accounts/account/addAccount",addAccount)
-app.use("/api/v1/accounts/account/getAccount",getAccount)
-app.use("/api/v1/accounts/account/addCompany",addCompany)
-app.use("/api/v1/accounts/account/addCompany",addCompany)
-app.use("/api/v1/accounts/account/addCompany",getCompany)
-
-
-app.get("/*", function (req, res) {
-  res.sendFile(
-    path.join(__dirname, "./client/build/index.html"),
-    function (err) {
-      if (err) {
-        res.status(500).send(err);
-      }
-    }
-  );
-});
-
-const port = process.env.PORT || 2040;
-
-app.listen(port, () => console.log(` App is running at ${port}`));
+app.listen(port, () => {
+    console.log(`Server is running at ${port}` )
+})
