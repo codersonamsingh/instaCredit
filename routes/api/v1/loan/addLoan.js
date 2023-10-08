@@ -180,7 +180,7 @@ async function getaccountObj(req,type){
     if(req.body.processingFee) {
         newaccount.processingFee = req.body.processingFee
     }
-    if(req.body. gender) {
+    if(req.body.installmentStartOn) {
         newaccount. gender = req.body. gender
     }
     if(req.body. gender) {
