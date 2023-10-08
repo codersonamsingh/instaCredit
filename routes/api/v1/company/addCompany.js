@@ -123,6 +123,10 @@ async function getCompanyObj(req,type){
     if(req.body.accessGranted) {
         newCompany.accessGranted = req.body.accessGranted
     }
+    
+    if(req.body.createdBy) {
+        newCompany.createdBy = req.body.date
+    }
     if(req.body.date) {
         newCompany.date = req.body.date
     }
