@@ -184,7 +184,7 @@ async function getaccountObj(req,type){
         newaccount.installmentStartOn = req.body.installmentStartOn
     }
     if(req.body.advanceEmi) {
-        newaccount. gender = req.body. gender
+        newaccount.advanceEmi = req.body. gender
     }if(req.body. gender) {
         newaccount. gender = req.body. gender
     }if(req.body. gender) {
