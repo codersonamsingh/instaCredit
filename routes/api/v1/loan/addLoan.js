@@ -190,7 +190,7 @@ async function getaccountObj(req,type){
         newaccount.comment = req.body.comment
     }
     if(req.body.installmentEndOn) {
-        newaccount.installmentEndOn = req.body. gender
+        newaccount.installmentEndOn = req.body.installmentEndOn
     }
     if(req.body. gender) {
         newaccount. gender = req.body. gender
