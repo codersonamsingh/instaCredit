@@ -188,7 +188,8 @@ async function getaccountObj(req,type){
     }
     if(req.body.comment) {
         newaccount.comment = req.body.comment
-    }if(req.body. gender) {
+    }
+    if(req.body. gender) {
         newaccount. gender = req.body. gender
     }
     if(req.body. gender) {
