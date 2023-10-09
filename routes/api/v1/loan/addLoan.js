@@ -184,7 +184,7 @@ async function getaccountObj(req,type){
         newaccount.installmentStartOn = req.body.installmentStartOn
     }
     if(req.body.disbursalDate) {
-        newaccount.advanceEmi = req.body.advanceEmi
+        newaccount.disbursalDate = req.body.advanceEmi
     }
     if(req.body.comment) {
         newaccount.comment = req.body.comment
