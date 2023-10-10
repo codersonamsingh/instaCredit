@@ -108,7 +108,7 @@ async function getaccountObj(req,type){
     if(req.body.company) {
         newaccount.company = req.body.company
     }
-    if(req.body. gender) {
+    if(req.body.user) {
         newaccount. gender = req.body. gender
     }
     if(req.body.customer) {
