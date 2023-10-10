@@ -132,6 +132,7 @@ async function getaccountObj(req,type){
     if(req.body.panCardNumber) {
         newaccount.panCardNumber = req.body.panCardNumber
     }
+    
     if(req.body.dateOfBirth) {
         newaccount.dateOfBirth = req.body.dateOfBirth
     }
