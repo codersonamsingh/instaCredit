@@ -108,8 +108,8 @@ async function getaccountObj(req,type){
     if(req.body.company) {
         newaccount.company = req.body.company
     }
-    if(req.body.user) {
-        newaccount.user = req.body.user
+    if(req.body. gender) {
+        newaccount. gender = req.body. gender
     }
     if(req.body.customer) {
         newaccount.customer = req.body.customer
@@ -132,7 +132,6 @@ async function getaccountObj(req,type){
     if(req.body.panCardNumber) {
         newaccount.panCardNumber = req.body.panCardNumber
     }
-    
     if(req.body.dateOfBirth) {
         newaccount.dateOfBirth = req.body.dateOfBirth
     }
@@ -184,20 +183,31 @@ async function getaccountObj(req,type){
     if(req.body.installmentStartOn) {
         newaccount.installmentStartOn = req.body.installmentStartOn
     }
-    if(req.body.disbursalDate) {
-        newaccount.disbursalDate = req.body.disbursalDate
+    if(req.body.guarantor) {
+        newaccount.guarantor = req.body.guarantor
     }
-    if(req.body.advanceEmi) {
-        newaccount.advanceEmi = req.body.advanceEmi
-    if(req.body.comment) {
-        newaccount.comment = req.body.comment
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
     }
-    if(req.body. gender) {
-        newaccount. gender = req.body. gender
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
     }
-    if(req.body. date) {
-        newaccount. date = req.body. date
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
     }
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
+    }
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
+    }
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
+    }
+    if(req.body. guarantor) {
+        newaccount. guarantor = req.body. guarantor
+    }
+    
      
    
     return newaccount
