@@ -190,7 +190,7 @@ async function getaccountObj(req,type){
         newaccount.mobileNumber = req.body.mobileNumber
     }
     if(req.body.mobileNumberVerified) {
-        newaccount. guarantor = req.body. guarantor
+        newaccount.mobileNumberVerified= req.body. guarantor
     }
     if(req.body. guarantor) {
         newaccount. guarantor = req.body. guarantor
