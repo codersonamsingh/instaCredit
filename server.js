@@ -11,6 +11,7 @@ const upload = require("express-fileupload")
 const addAccount = require("./routes/api/v1/accounts/account/addAccount");
 const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 const addCompany = require("./routes/api/v1/accounts/company/addCompany");
+const getCompany = require("./routes/api/v1/accounts/company/getCompany");
 
 
 const app = express();
