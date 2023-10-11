@@ -39,6 +39,7 @@ require("./strategies/jsonwtStrategy")(passport)
 app.use("/api/v1/accounts/account/addAccount",addAccount);
 app.use("/api/v1/accounts/account/getAccount",getAccount);
 app.use("/api/v1/accounts/company/addCompany",addCompany);
+app.use("/api/v1/accounts/company/getCompany",getCompany);
 
 
 
