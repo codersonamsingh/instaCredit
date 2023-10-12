@@ -189,8 +189,8 @@ async function getaccountObj(req,type){
     if(req.body.advanceEmi) {
         newaccount.advanceEmi = req.body.advanceEmi
     }
-    if(req.body.mobileNumberVerified) {
-        newaccount.mobileNumberVerified= req.body.mobileNumberVerified
+    if(req.body.comment) {
+        newaccount.comment= req.body.comment
     }
     if(req.body. guarantor) {
         newaccount. guarantor = req.body. guarantor
