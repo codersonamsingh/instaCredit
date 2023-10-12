@@ -183,8 +183,8 @@ async function getaccountObj(req,type){
     if(req.body.installmentStartOn) {
         newaccount.installmentStartOn = req.body.installmentStartOn
     }
-    if(req.body.guarantor) {
-        newaccount.guarantor = req.body.guarantor
+    if(req.body.disbursalDate) {
+        newaccount.disbursalDate = req.body.disbursalDate
     }
     if(req.body.mobileNumber) {
         newaccount.mobileNumber = req.body.mobileNumber
