@@ -186,8 +186,8 @@ async function getaccountObj(req,type){
     if(req.body.disbursalDate) {
         newaccount.disbursalDate = req.body.disbursalDate
     }
-    if(req.body.mobileNumber) {
-        newaccount.mobileNumber = req.body.mobileNumber
+    if(req.body.advanceEmi) {
+        newaccount.advanceEmi = req.body.advanceEmi
     }
     if(req.body.mobileNumberVerified) {
         newaccount.mobileNumberVerified= req.body.mobileNumberVerified
