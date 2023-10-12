@@ -195,8 +195,8 @@ async function getaccountObj(req,type){
     if(req.body.installmentEndOn) {
         newaccount.installmentEndOn = req.body.installmentEndOn
     }
-    if(req.body. guarantor) {
-        newaccount. guarantor = req.body. guarantor
+    if(req.body.guarantor) {
+        newaccount.guarantor = req.body.guarantor
     }
     if(req.body. guarantor) {
         newaccount. guarantor = req.body. guarantor
