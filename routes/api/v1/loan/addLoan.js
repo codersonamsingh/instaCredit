@@ -192,8 +192,8 @@ async function getaccountObj(req,type){
     if(req.body.comment) {
         newaccount.comment= req.body.comment
     }
-    if(req.body. guarantor) {
-        newaccount. guarantor = req.body. guarantor
+    if(req.body.installmentEndOn) {
+        newaccount.installmentEndOn = req.body.installmentEndOn
     }
     if(req.body. guarantor) {
         newaccount. guarantor = req.body. guarantor
