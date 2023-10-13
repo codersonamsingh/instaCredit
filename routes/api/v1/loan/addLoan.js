@@ -210,7 +210,7 @@ async function getaccountObj(req,type){
     if(req.body.reference2) {
         newaccount.reference2 = req.body.reference2
     }if(req.body.mobileNumber) {
-        newaccount.address = req.body.address
+        newaccount.mobileNumber= req.body.address
     }if(req.body.address) {
         newaccount.address = req.body.address
     }if(req.body.address) {
