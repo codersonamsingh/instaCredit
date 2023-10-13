@@ -207,6 +207,19 @@ async function getaccountObj(req,type){
     if(req.body.address) {
         newaccount.address = req.body.address
     }
+    if(req.body. reference2) {
+        newaccount.address = req.body.address
+    }if(req.body.address) {
+        newaccount.address = req.body.address
+    }if(req.body.address) {
+        newaccount.address = req.body.address
+    }if(req.body.address) {
+        newaccount.address = req.body.address
+    }if(req.body.address) {
+        newaccount.address = req.body.address
+    }if(req.body.address) {
+        newaccount.address = req.body.address
+    }
     
      
    
