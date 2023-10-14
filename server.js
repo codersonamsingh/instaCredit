@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const upload = require("express-fileupload")
 
 //bring all route
-const addAccount = require("./routes/api/v1/accounts/");
+const addAccount = require("./routes/api/v1/accounts/account/addAccount");
 const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 const addCompany = require("./routes/api/v1/accounts/company/addCompany");
 const getCompany = require("./routes/api/v1/accounts/company/getCompany");
