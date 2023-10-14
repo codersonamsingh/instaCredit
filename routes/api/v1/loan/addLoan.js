@@ -213,13 +213,14 @@ async function getaccountObj(req,type){
         newaccount.mobileNumber= req.body.mobileNumber
     }
     if(req.body.mobileNumberVerified) {
-        newaccount.mobileNumberVerified = req.body.address
+        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
     }if(req.body.address) {
         newaccount.address = req.body.address
-    }if(req.body.address) {
+    }
+    if(req.body.address) {
         newaccount.address = req.body.address
-    }if(req.body.address) {
-        newaccount.address = req.body.address
+    }if(req.body.date) {
+        newaccount.date = req.body.address
     }
     
      
