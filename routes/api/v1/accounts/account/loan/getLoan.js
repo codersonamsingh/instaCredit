@@ -70,7 +70,7 @@ router.get("/search/:searchQuery", async(req,res) => {
 
         const getLoan = await Loan.find({
             $or:[
-                {: new RegExp(searchQuery, "i")},
+                {company: new RegExp(searchQuery, "i")},
                 {label: new RegExp(searchQuery, "i")},
                 
             ]
