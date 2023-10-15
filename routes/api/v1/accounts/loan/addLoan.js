@@ -1,24 +1,24 @@
 const express = require("express");
-constaccount = require("../../../../../Models/Accounts/account");
+constLoan = require("../../../../../Models/Loans/Loan");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/account/accountValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/Loan/LoanValidation")
 
 //CRUD = crete Read Update Delete
 //@type POST
-//@routes/api/v1/accounts/account/addAccount
-//@des crete Newaccount
+//@routes/api/v1/Loans/Loan/addLoan
+//@des crete NewLoan
 //@access public
 
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const accountObj = await getaccountObj(req,"create")
-console.log(accountObj)
-     await new account(accountObj)
+        const LoanObj = await getLoanObj(req,"create")
+console.log(LoanObj)
+     await new Loan(LoanObj)
       .save();
       
       res.status(201).json({
-        message: "account Added",
+        message: "Loan Added",
         varient : "success"
       })
 
@@ -32,27 +32,27 @@ console.log(accountObj)
 }
 )
 //@type POST
-//@routes/api/v1/accounts/account/addAccount/id:
-//@des crete Updateaccount
+//@routes/api/v1/Loans/Loan/addLoan/id:
+//@des crete UpdateLoan
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constaccountObj = await getaccountObj(req,"update")
+        constLoanObj = await getLoanObj(req,"update")
 
-        constaccount = awaitaccount.findOneAndUpdate(
+        constLoan = awaitLoan.findOneAndUpdate(
             {id:req.params.id},
-            {$set:accountObj},
+            {$set:LoanObj},
             {new:true}
         )
-        if(!account){
+        if(!Loan){
             res.status(500).json({
-                message: "account not found",
+                message: "Loan not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Updated Successfully",
+            message: "Loan Updated Successfully",
             varient : "error"
           })
      
@@ -68,22 +68,22 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/accounts//addAccount/deleteOne/id:
-//@des Deleteaccount
+//@route / api/v1/Loans//addLoan/deleteOne/id:
+//@des DeleteLoan
 //@access public
 
 router.delete("/deleteOne/:id",async(req,res) => {
 
     try{
-        constaccount = awaitaccount.findIdAndRemove(req.params.id);
-        if(!account){
+        constLoan = awaitLoan.findIdAndRemove(req.params.id);
+        if(!Loan){
             res.status(500).json({
-                message: "account not found",
+                message: "Loan not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Deleted Successfully",
+            message: "Loan Deleted Successfully",
             varient : "error"
           })
      
@@ -99,32 +99,32 @@ router.delete("/deleteOne/:id",async(req,res) => {
 
     }
     })
-async function getaccountObj(req,type){
-    let newaccount = {}
+async function getLoanObj(req,type){
+    let newLoan = {}
     if(req.body.company) {
-        newaccount.company = req.body.company
+        newLoan.company = req.body.company
     }
     if(req.body.label) {
-        newaccount.label = req.body.label
+        newLoan.label = req.body.label
     }
     if(req.body.link) {
-        newaccount.link = req.body.link
+        newLoan.link = req.body.link
     }
      if(req.body.notes) {
-        newaccount.notes = req.body.notes
+        newLoan.notes = req.body.notes
     }
      if(req.body.document) {
-        newaccount.document = req.body.document
+        newLoan.document = req.body.document
     }
     if(req.body.user) {
-        newaccount.user = req.body.user
+        newLoan.user = req.body.user
     }
     if(req.body.date) {
-        newaccount. date = req.body. date
+        newLoan. date = req.body. date
     }
      
    
-    return newaccount
+    return newLoan
 }
     
 module.exports = router;
