@@ -1,23 +1,23 @@
-//Read = 1. Get ALL Company , 2. get one Company by Id, 3. Search Company with note or amount
+//Read = 1. Get ALL Loan , 2. get one Loan by Id, 3. Search Loan with note or amount
 
 const express = require("express");
-const Company = require("../../../../../Models/Accounts/Company");
+const Loan = require("../../../../../Models/Accounts/Loan");
 const router = express.Router();
 
 //@type Get
-//@route /api/v1/account/Company/getCompany/getAll
-//@des get all  Company
+//@route /api/v1/account/Loan/getLoan/getAll
+//@des get all  Loan
 //@access public
 router.get("/getAll", async(req,res) => {
 
 try{ 
     
-    const getCompany = await Company.find()
+    const getLoan = await Loan.find()
 
 
      res.json({
-        data:getCompany,
-        message:"Company loaded",
+        data:getLoan,
+        message:"Loan loaded",
         varient:"success"
      })
 
@@ -32,19 +32,19 @@ try{
 })
 
 //@type Get
-//@route /api/v1/account/Company/getCompany/getOne/:id
-//@des get one Company
+//@route /api/v1/account/Loan/getLoan/getOne/:id
+//@des get one Loan
 //@access public
 router.get("/getOne/:id", async(req,res) => {
 
     try{ 
         
-        const getCompany = await Company.findById(req.params.id)
+        const getLoan = await Loan.findById(req.params.id)
     
     
          res.json({
-            data:getCompany,
-            message:"Company loaded",
+            data:getLoan,
+            message:"Loan loaded",
             varient:"success"
          })
     
@@ -59,8 +59,8 @@ router.get("/getOne/:id", async(req,res) => {
     })
 
 //@type Get search
-//@route /api/v1/account/Company/getCompany/search/:seachQuery
-//@des to search Company
+//@route /api/v1/account/Loan/getLoan/search/:seachQuery
+//@des to search Loan
 //@access public
 router.get("/search/:searchQuery", async(req,res) => {
 
@@ -68,17 +68,17 @@ router.get("/search/:searchQuery", async(req,res) => {
         
         const searchQuery = req.params.searchQuery
 
-        const getCompany = await Company.find({
+        const getLoan = await Loan.find({
             $or:[
-                {company: new RegExp(searchQuery, "i")},
+                {Loan: new RegExp(searchQuery, "i")},
                 {label: new RegExp(searchQuery, "i")},
                 
             ]
         })
     
          res.json({
-            data:getCompany,
-            message:"Company loaded",
+            data:getLoan,
+            message:"Loan loaded",
             varient:"success"
          })
     
