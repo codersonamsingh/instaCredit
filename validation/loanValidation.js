@@ -1,6 +1,6 @@
 const validateOnCreate = async(req,res,next) => {
 
-    if(!req.body?.){
+    if(!req.body?.comp){
 
        return res.status(400).json({
             message: "name Required",
