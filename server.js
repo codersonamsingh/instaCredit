@@ -13,7 +13,7 @@ const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 const addCompany = require("./routes/api/v1/accounts/account/addCompany");
 const getCompany = require("./routes/api/v1/accounts/company/getCompany");
 const addLoan = require("./routes/api/v1/accounts/account/addLoan");
-const getLoan = require("./routes/api/v1/accounts/company/getCompany");
+const getLoan = require("./routes/api/v1/accounts/company/getLoan");
 
 
 const app = express();
