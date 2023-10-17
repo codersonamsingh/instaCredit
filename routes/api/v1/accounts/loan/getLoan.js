@@ -1,7 +1,7 @@
 //Read = 1. Get ALL Loan , 2. get one Loan by Id, 3. Search Loan with note or amount
 
 const express = require("express");
-const Loan = require("../../../../../Models/Accounts/Loan");
+const Loan = require("../../../../../Models/Loan");
 const router = express.Router();
 
 //@type Get

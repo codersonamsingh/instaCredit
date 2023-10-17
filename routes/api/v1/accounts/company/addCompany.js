@@ -1,5 +1,5 @@
 const express = require("express");
-constCompany = require("../../../../../Models/Company");
+const Company = require("../../../../../Models/Company");
 const router = express.Router();
 const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/companyValidation")
 
