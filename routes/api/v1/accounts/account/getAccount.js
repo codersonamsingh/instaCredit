@@ -1,7 +1,7 @@
 //Read = 1. Get ALL Account , 2. get one Account by Id, 3. Search Account with note or amount
 
 const express = require("express");
-const Account = require("../../../../../Models/Accounts/Account");
+const Account = require("../../../../../Models/Account");
 const router = express.Router();
 
 //@type Get

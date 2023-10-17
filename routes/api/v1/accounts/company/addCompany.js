@@ -1,7 +1,7 @@
 const express = require("express");
-constCompany = require("../../../../../Models/Companys/Company");
+constCompany = require("../../../../../Models/Company");
 const router = express.Router();
-const {vali dateOnCreate, vali dateOnUp date} = require("../../../../../validation/Company/CompanyValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/companyValidation")
 
 //CRUD = crete Read Up date Delete
 
@@ -10,7 +10,7 @@ const {vali dateOnCreate, vali dateOnUp date} = require("../../../../../validati
 //@des crete NewCompany
 //@access public
 
-router.post("/",vali dateOnCreate, async(req,res) =>{
+router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
         const CompanyObj = await getCompanyObj(req,"create")
@@ -44,7 +44,7 @@ router.post("/:id",async (req,res) => {
     try{
         constCompanyObj = await getCompanyObj(req,"up date")
 
-        constCompany = awaitCompany.findOneAndUp date(
+        constCompany = awaitCompany.findOneAndUpdate(
             {id:req.params.id},
             {$set:CompanyObj},
             {new:true}

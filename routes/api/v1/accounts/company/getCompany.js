@@ -1,7 +1,7 @@
 //Read = 1. Get ALL Company , 2. get one Company by Id, 3. Search Company with note or amount
 
 const express = require("express");
-const Company = require("../../../../../Models/Accounts/Company");
+const Company = require("../../../../../Models/Company");
 const router = express.Router();
 
 //@type Get
