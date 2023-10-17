@@ -14,6 +14,7 @@ const addCompany = require("./routes/api/v1/accounts/account/addCompany");
 const getCompany = require("./routes/api/v1/accounts/company/getCompany");
 
 
+
 const app = express();
 app.use(upload({useTempfiles:true}))
 
