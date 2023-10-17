@@ -32,7 +32,7 @@ console.log(accountObj)
 }
 )
 //@type POST
-//@routes/api/v1/accounts/account/addAccount/id:
+//@routes/api/v1/accounts/account/addAccount
 //@des crete Updateaccount
 //@access public
 router.post("/:id",async (req,res) => {
