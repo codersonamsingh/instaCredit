@@ -1,7 +1,7 @@
 const express = require("express");
 const account = require("../../../../../Models/Accounts/account");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/account/accountValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/")
 
 //CRUD = crete Read Update Delete
 //@type POST
