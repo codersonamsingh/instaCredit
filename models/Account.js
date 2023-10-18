@@ -34,4 +34,4 @@ const AccountSchema = new Schema({
   },
 });
 
-module.exports = Account = mongoose.model("Account", AccountSchema);
+module.exports = Account =mongoose.model("Account", AccountSchema);
