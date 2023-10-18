@@ -1,23 +1,23 @@
-//Read = 1. Get ALL Account , 2. get one Account by Id, 3. Search Account with note or amount
+//Read = 1. Get ALL account , 2. get one account by Id, 3. Search account with note or amount
 
 const express = require("express");
-const Account = require("../../../../../models/Account");
+const account = require("../../../../../models/Account");
 const router = express.Router();
 
 //@type Get
-//@route /api/v1/account/Account/getAccount/getAll
-//@des get all  Account
+//@route /api/v1/account/account/getaccount/getAll
+//@des get all  account
 //@access public
 router.get("/getAll", async(req,res) => {
 
 try{ 
     
-    const getAccount = await Account.find()
+    const getaccount = await account.find()
 
 
      res.json({
-        data:getAccount,
-        message:"Account loaded",
+        data:getaccount,
+        message:"account loaded",
         varient:"success"
      })
 
@@ -32,19 +32,19 @@ try{
 })
 
 //@type Get
-//@route /api/v1/account/Account/getAccount/getOne/:id
-//@des get one Account
+//@route /api/v1/account/account/getaccount/getOne/:id
+//@des get one account
 //@access public
 router.get("/getOne/:id", async(req,res) => {
 
     try{ 
         
-        const getAccount = await Account.findById(req.params.id)
+        const getaccount = await account.findById(req.params.id)
     
     
          res.json({
-            data:getAccount,
-            message:"Account loaded",
+            data:getaccount,
+            message:"account loaded",
             varient:"success"
          })
     
@@ -59,8 +59,8 @@ router.get("/getOne/:id", async(req,res) => {
     })
 
 //@type Get search
-//@route /api/v1/account/Account/getAccount/search/:seachQuery
-//@des to search Account
+//@route /api/v1/account/account/getaccount/search/:seachQuery
+//@des to search account
 //@access public
 router.get("/search/:searchQuery", async(req,res) => {
 
@@ -68,7 +68,7 @@ router.get("/search/:searchQuery", async(req,res) => {
         
         const searchQuery = req.params.searchQuery
 
-        const getAccount = await Account.find({
+        const getaccount = await account.find({
             $or:[
                 {company: new RegExp(searchQuery, "i")},
                 {label: new RegExp(searchQuery, "i")},
@@ -77,8 +77,8 @@ router.get("/search/:searchQuery", async(req,res) => {
         })
     
          res.json({
-            data:getAccount,
-            message:"Account loaded",
+            data:getaccount,
+            message:"account loaded",
             varient:"success"
          })
     
