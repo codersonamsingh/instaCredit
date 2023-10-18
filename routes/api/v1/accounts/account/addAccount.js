@@ -1,5 +1,5 @@
 const express = require("express");
-const account = require("../../../../../");
+const account = require("../../../../../models/Account");
 const router = express.Router();
 const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/accountValidation")
 
