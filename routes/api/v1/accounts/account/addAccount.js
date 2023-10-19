@@ -1,5 +1,5 @@
 const express = require("express");
-const account = require("../../../../../models/Account");
+const Account = require("../../../../../models/Account");
 const router = express.Router();
 const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/accountValidation")
 
@@ -12,9 +12,9 @@ const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const accountObj = await getAccountObj(req,"create")
+        const accountObj = await getaccountObj(req,"create")
 console.log(accountObj)
-     await new account(accountObj)
+     await new Account(accountObj)
       .save();
       
       res.status(201).json({
