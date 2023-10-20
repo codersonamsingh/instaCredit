@@ -124,7 +124,7 @@ async function getLoanObj(req,type){
         newLoan.mobileNumberVerified = req.body.mobileNumberVerified
     }
     if(req.body.gender) {
-        newLoan. gender = req.body. gender
+        newLoan.gender = req.body. gender
     }
     if(req.body.aadharCardNumber) {
         newLoan.aadharCardNumber = req.body.aadharCardNumber
