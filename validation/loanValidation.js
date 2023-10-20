@@ -13,4 +13,4 @@ const validateOnUpdate = async(req,res,next) => {
 
     next();
 }
-module.exports = {validateOnCreate, validateOnUpdate}
+Module.exports = {validateOnCreate, validateOnUpdate}
