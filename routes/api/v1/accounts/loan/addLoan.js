@@ -214,12 +214,8 @@ async function getLoanObj(req,type){
     }
     if(req.body.mobileNumberVerified) {
         newLoan.mobileNumberVerified = req.body.mobileNumberVerified
-    }if(req.body.address) {
-        newLoan.address = req.body.address
     }
-    if(req.body.address) {
-        newLoan.address = req.body.address
-    }if(req.body.date) {
+    if(req.body.date) {
         newLoan.date = req.body.address
     }
     
