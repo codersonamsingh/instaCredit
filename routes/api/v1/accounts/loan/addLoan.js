@@ -195,12 +195,7 @@ async function getLoanObj(req,type){
     if(req.body.guarantor) {
         newLoan.guarantor = req.body.guarantor
     }
-    if(req.body.mobileNumber) {
-        newLoan.mobileNumber = req.body.mobileNumber
-    }
-    if(req.body.mobileNumberVerified) {
-        newLoan.mobileNumberVerified = req.body.mobileNumberVerified
-    }
+    
     if(req.body.address) {
         newLoan.address = req.body.address
     }
