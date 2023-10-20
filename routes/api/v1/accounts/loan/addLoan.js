@@ -1,25 +1,25 @@
 const express = require("express");
-const account = require("../../../../../Models/Loan");
+const Loan = require("../../../../../Models/Loan");
 const router = express.Router();
 const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/loanValidation")
 
 //CRUD = crete Read Update Delete
 
 //@type POST
-//@routes/api/v1/accounts/account/addaccount
-//@des crete Newaccount
+//@routes/api/v1/Loans/Loan/addLoan
+//@des crete NewLoan
 //@access public
 
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const accountObj = await getaccountObj(req,"create")
-console.log(accountObj)
-     await new account(accountObj)
+        const LoanObj = await getLoanObj(req,"create")
+console.log(LoanObj)
+     await new Loan(LoanObj)
       .save();
       
       res.status(201).json({
-        message: "account Added",
+        message: "Loan Added",
         varient : "success"
       })
 
@@ -36,27 +36,27 @@ console.log(accountObj)
 
 )
 //@type POST
-//@routes/api/v1/accounts/account/addaccount/id:
-//@des crete Updateaccount
+//@routes/api/v1/Loans/Loan/addLoan/id:
+//@des crete UpdateLoan
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constaccountObj = await getaccountObj(req,"update")
+        constLoanObj = await getLoanObj(req,"update")
 
-        constaccount = awaitaccount.findOneAndUpdate(
+        constLoan = awaitLoan.findOneAndUpdate(
             {id:req.params.id},
-            {$set:accountObj},
+            {$set:LoanObj},
             {new:true}
         )
-        if(!account){
+        if(!Loan){
             res.status(500).json({
-                message: "account not found",
+                message: "Loan not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Updated Successfully",
+            message: "Loan Updated Successfully",
             varient : "error"
           })
      
@@ -72,22 +72,22 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/accounts//addaccount/deleteOne/id:
-//@des Deleteaccount
+//@route / api/v1/Loans//addLoan/deleteOne/id:
+//@des DeleteLoan
 //@access public
 
 router.delete("/deleteOne/:id",async(req,res) => {
 
     try{
-        constaccount = awaitaccount.findIdAndRemove(req.params.id);
-        if(!account){
+        constLoan = awaitLoan.findIdAndRemove(req.params.id);
+        if(!Loan){
             res.status(500).json({
-                message: "account not found",
+                message: "Loan not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Deleted Successfully",
+            message: "Loan Deleted Successfully",
             varient : "error"
           })
      
@@ -103,129 +103,129 @@ router.delete("/deleteOne/:id",async(req,res) => {
 
     }
     })
-async function getaccountObj(req,type){
-    let newaccount = {}
+async function getLoanObj(req,type){
+    let newLoan = {}
     if(req.body.company) {
-        newaccount.company = req.body.company
+        newLoan.company = req.body.company
     }
     if(req.body.user) {
-        newaccount.user = req.body.user
+        newLoan.user = req.body.user
     }
     if(req.body.customer) {
-        newaccount.customer = req.body.customer
+        newLoan.customer = req.body.customer
     }
      if(req.body.name) {
-        newaccount.name = req.body.name
+        newLoan.name = req.body.name
     }
      if(req.body.mobileNumber) {
-        newaccount.mobileNumber = req.body.mobileNumber
+        newLoan.mobileNumber = req.body.mobileNumber
     }
     if(req.body.mobileNumberVerified) {
-        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+        newLoan.mobileNumberVerified = req.body.mobileNumberVerified
     }
     if(req.body.gender) {
-        newaccount. gender = req.body. gender
+        newLoan. gender = req.body. gender
     }
     if(req.body.aadharCardNumber) {
-        newaccount.aadharCardNumber = req.body.aadharCardNumber
+        newLoan.aadharCardNumber = req.body.aadharCardNumber
     }
     if(req.body.panCardNumber) {
-        newaccount.panCardNumber = req.body.panCardNumber
+        newLoan.panCardNumber = req.body.panCardNumber
     }
     if(req.body.dateOfBirth) {
-        newaccount.dateOfBirth = req.body.dateOfBirth
+        newLoan.dateOfBirth = req.body.dateOfBirth
     }
     if(req.body.address) {
-        newaccount.address = req.body.address
+        newLoan.address = req.body.address
     }
     if(req.body.postOffice) {
-        newaccount.postOffice = req.body.postOffice
+        newLoan.postOffice = req.body.postOffice
     }
     if(req.body.block) {
-        newaccount.block = req.body.block
+        newLoan.block = req.body.block
     }
     if(req.body.village) {
-        newaccount.village = req.body.village
+        newLoan.village = req.body.village
     }
     if(req.body.district) {
-        newaccount.district = req.body.district
+        newLoan.district = req.body.district
     }
     if(req.body.state) {
-        newaccount.state = req.body.state
+        newLoan.state = req.body.state
     }
     if(req.body.pinCode) {
-        newaccount.pinCode = req.body.pinCode
+        newLoan.pinCode = req.body.pinCode
     }
     if(req.body.loanNo) {
-        newaccount.loanNo = req.body.loanNo
+        newLoan.loanNo = req.body.loanNo
     }
     if(req.body.loanStatus) {
-        newaccount.loanStatus= req.body.loanStatus
+        newLoan.loanStatus= req.body.loanStatus
     }
     if(req.body.amountFinanced) {
-        newaccount.amountFinanced = req.body.amountFinanced
+        newLoan.amountFinanced = req.body.amountFinanced
     }
     if(req.body.emiAmount) {
-        newaccount.emiAmount = req.body.emiAmount
+        newLoan.emiAmount = req.body.emiAmount
     }
     if(req.body.totalEmi) {
-        newaccount.totalEmi = req.body.totalEmi   
+        newLoan.totalEmi = req.body.totalEmi   
     }
     if(req.body.emiFrequency) {
-        newaccount.emiFrequency = req.body.interestRate
+        newLoan.emiFrequency = req.body.interestRate
     }
     if(req.body.interestRate) {
-        newaccount.interestRate = req.body.interestRate
+        newLoan.interestRate = req.body.interestRate
     }
     if(req.body.processingFee) {
-        newaccount.processingFee = req.body.processingFee
+        newLoan.processingFee = req.body.processingFee
     }
     if(req.body.installmentStartOn) {
-        newaccount.installmentStartOn = req.body.installmentStartOn
+        newLoan.installmentStartOn = req.body.installmentStartOn
     }
     if(req.body.disbursalDate) {
-        newaccount.disbursalDate = req.body.disbursalDate
+        newLoan.disbursalDate = req.body.disbursalDate
     }
     if(req.body.advanceEmi) {
-        newaccount.advanceEmi = req.body.advanceEmi
+        newLoan.advanceEmi = req.body.advanceEmi
     }
     if(req.body.comment) {
-        newaccount.comment= req.body.comment
+        newLoan.comment= req.body.comment
     }
     if(req.body.installmentEndOn) {
-        newaccount.installmentEndOn = req.body.installmentEndOn
+        newLoan.installmentEndOn = req.body.installmentEndOn
     }
     if(req.body.guarantor) {
-        newaccount.guarantor = req.body.guarantor
+        newLoan.guarantor = req.body.guarantor
     }
     if(req.body.mobileNumber) {
-        newaccount.mobileNumber = req.body.mobileNumber
+        newLoan.mobileNumber = req.body.mobileNumber
     }
     if(req.body.mobileNumberVerified) {
-        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+        newLoan.mobileNumberVerified = req.body.mobileNumberVerified
     }
     if(req.body.address) {
-        newaccount.address = req.body.address
+        newLoan.address = req.body.address
     }
     if(req.body.reference2) {
-        newaccount.reference2 = req.body.reference2
+        newLoan.reference2 = req.body.reference2
     }if(req.body.mobileNumber) {
-        newaccount.mobileNumber= req.body.mobileNumber
+        newLoan.mobileNumber= req.body.mobileNumber
     }
     if(req.body.mobileNumberVerified) {
-        newaccount.mobileNumberVerified = req.body.mobileNumberVerified
+        newLoan.mobileNumberVerified = req.body.mobileNumberVerified
     }if(req.body.address) {
-        newaccount.address = req.body.address
+        newLoan.address = req.body.address
     }
     if(req.body.address) {
-        newaccount.address = req.body.address
+        newLoan.address = req.body.address
     }if(req.body.date) {
-        newaccount.date = req.body.address
+        newLoan.date = req.body.address
     }
     
      
    
-    return newaccount
+    return newLoan
 }
     
 module.exports = router;
