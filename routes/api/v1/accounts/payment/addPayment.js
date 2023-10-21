@@ -5,7 +5,7 @@ const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/
 
 //CRUD = crete Read Update Delete
 //@type POST
-//@routes/api/v1/Payments/Payment/addPayment
+//@routes/api/v1/accounts/Payment/addPayment
 //@des crete NewPayment
 //@access public
 
