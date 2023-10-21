@@ -104,7 +104,7 @@ async function getPaymentObj(req,type){
     if(req.body.company) {
         newPayment.company = req.body.company
     }
-    if(req.body.label) {
+    if(req.body.amount) {
         newPayment.label = req.body.label
     }
     if(req.body.link) {
