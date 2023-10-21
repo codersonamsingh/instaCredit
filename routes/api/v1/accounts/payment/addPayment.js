@@ -107,7 +107,7 @@ async function getPaymentObj(req,type){
     if(req.body.amount) {
         newPayment.amount = req.body.amount
     }
-    if(req.body.link) {
+    if(req.body.isCr) {
         newPayment.link = req.body.link
     }
      if(req.body.notes) {
