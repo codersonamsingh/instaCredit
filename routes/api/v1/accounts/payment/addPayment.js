@@ -1,24 +1,24 @@
 const express = require("express");
-const Account = require("../../../../../models/Account");
+const Payment = require("../../../../../models/Payment");
 const router = express.Router();
-const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/accountValidation")
+const {validateOnCreate, validateOnUpdate} = require("../../../../../validation/PaymentValidation")
 
 //CRUD = crete Read Update Delete
 //@type POST
-//@routes/api/v1/accounts/account/addAccount
-//@des crete Newaccount
+//@routes/api/v1/Payments/Payment/addPayment
+//@des crete NewPayment
 //@access public
 
 router.post("/",validateOnCreate, async(req,res) =>{
 
     try{
-        const accountObj = await getaccountObj(req,"create")
-console.log(accountObj)
-     await new Account(accountObj)
+        const PaymentObj = await getPaymentObj(req,"create")
+console.log(PaymentObj)
+     await new Payment(PaymentObj)
       .save();
       
       res.status(201).json({
-        message: "account Added",
+        message: "Payment Added",
         varient : "success"
       })
 
@@ -32,27 +32,27 @@ console.log(accountObj)
 }
 )
 //@type POST
-//@routes/api/v1/accounts/account/addAccount
-//@des crete Updateaccount
+//@routes/api/v1/Payments/Payment/addPayment
+//@des crete UpdatePayment
 //@access public
 router.post("/:id",async (req,res) => {
     
     try{
-        constaccountObj = await getaccountObj(req,"update")
+        constPaymentObj = await getPaymentObj(req,"update")
 
-        constaccount = awaitaccount.findOneAndUpdate(
+        constPayment = awaitPayment.findOneAndUpdate(
             {id:req.params.id},
-            {$set:accountObj},
+            {$set:PaymentObj},
             {new:true}
         )
-        if(!account){
+        if(!Payment){
             res.status(500).json({
-                message: "account not found",
+                message: "Payment not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Updated Successfully",
+            message: "Payment Updated Successfully",
             varient : "error"
           })
      
@@ -68,22 +68,22 @@ router.post("/:id",async (req,res) => {
 })
 
 //@type Delete
-//@route / api/v1/accounts//addAccount/deleteOne/id:
-//@des Deleteaccount
+//@route / api/v1/Payments//addPayment/deleteOne/id:
+//@des DeletePayment
 //@access public
 
 router.delete("/deleteOne/:id",async(req,res) => {
 
     try{
-        constaccount = awaitaccount.findIdAndRemove(req.params.id);
-        if(!account){
+        constPayment = awaitPayment.findIdAndRemove(req.params.id);
+        if(!Payment){
             res.status(500).json({
-                message: "account not found",
+                message: "Payment not found",
                 varient : "error"
               })
         }
         res.status(500).json({
-            message: "account Deleted Successfully",
+            message: "Payment Deleted Successfully",
             varient : "error"
           })
      
@@ -99,32 +99,32 @@ router.delete("/deleteOne/:id",async(req,res) => {
 
     }
     })
-async function getaccountObj(req,type){
-    let newaccount = {}
+async function getPaymentObj(req,type){
+    let newPayment = {}
     if(req.body.company) {
-        newaccount.company = req.body.company
+        newPayment.company = req.body.company
     }
     if(req.body.label) {
-        newaccount.label = req.body.label
+        newPayment.label = req.body.label
     }
     if(req.body.link) {
-        newaccount.link = req.body.link
+        newPayment.link = req.body.link
     }
      if(req.body.notes) {
-        newaccount.notes = req.body.notes
+        newPayment.notes = req.body.notes
     }
      if(req.body.document) {
-        newaccount.document = req.body.document
+        newPayment.document = req.body.document
     }
     if(req.body.user) {
-        newaccount.user = req.body.user
+        newPayment.user = req.body.user
     }
     if(req.body.date) {
-        newaccount. date = req.body. date
+        newPayment. date = req.body. date
     }
      
    
-    return newaccount
+    return newPayment
 }
     
 module.exports = router;
