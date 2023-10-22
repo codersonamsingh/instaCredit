@@ -124,13 +124,17 @@ async function getPaymentObj(req,type){
     }
     if(req.body.account) {
         newPayment.account = req.body.account
-    }if(req.body.approvedByAdmin) {
+    }
+    if(req.body.loan) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
-    }if(req.body.approvedByAdmin) {
+    }
+    if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
-    }if(req.body.approvedByAdmin) {
+    }
+    if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
-    }if(req.body.approvedByAdmin) {
+    }
+    if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
     }
      
