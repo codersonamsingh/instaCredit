@@ -122,6 +122,17 @@ async function getPaymentObj(req,type){
     if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
     }
+    if(req.body.approvedByAdmin) {
+        newPayment.approvedByAdmin = req.body.approvedByAdmin
+    }if(req.body.approvedByAdmin) {
+        newPayment.approvedByAdmin = req.body.approvedByAdmin
+    }if(req.body.approvedByAdmin) {
+        newPayment.approvedByAdmin = req.body.approvedByAdmin
+    }if(req.body.approvedByAdmin) {
+        newPayment.approvedByAdmin = req.body.approvedByAdmin
+    }if(req.body.approvedByAdmin) {
+        newPayment.approvedByAdmin = req.body.approvedByAdmin
+    }
      
    
     return newPayment
