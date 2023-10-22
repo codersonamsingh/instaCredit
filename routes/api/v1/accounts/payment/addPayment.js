@@ -116,7 +116,7 @@ async function getPaymentObj(req,type){
      if(req.body.document) {
         newPayment.document = req.body.document
     }
-    if(req.body.user) {
+    if(req.body.paymentDate) {
         newPayment.user = req.body.user
     }
     if(req.body.date) {
