@@ -70,8 +70,8 @@ router.get("/search/:searchQuery", async(req,res) => {
 
         const getaccount = await account.find({
             $or:[
-                {company: new RegExp(searchQuery, "i")},
                 {label: new RegExp(searchQuery, "i")},
+                {linkl: new RegExp(searchQuery, "i")},
                 
             ]
         })
