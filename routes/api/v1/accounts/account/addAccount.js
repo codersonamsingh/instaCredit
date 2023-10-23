@@ -124,7 +124,7 @@ async function getaccountObj(req,type){
     }
      
    
-    return newAccount
+    return newaccount
 }
     
 module.exports = router;
