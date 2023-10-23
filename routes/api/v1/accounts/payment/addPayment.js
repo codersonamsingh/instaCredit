@@ -126,7 +126,7 @@ async function getPaymentObj(req,type){
         newPayment.account = req.body.account
     }
     if(req.body.loan) {
-        newPayment.loan = req.body.approvedByAdmin
+        newPayment.loan = req.body.loan
     }
     if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
