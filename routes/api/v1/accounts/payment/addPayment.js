@@ -129,7 +129,7 @@ async function getPaymentObj(req,type){
         newPayment.loan = req.body.loan
     }
     if(req.body.createdBy) {
-        newPayment.createdBy = req.body.approvedByAdmin
+        newPayment.createdBy = req.body.createdBy
     }
     if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
