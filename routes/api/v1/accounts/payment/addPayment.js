@@ -138,7 +138,7 @@ async function getPaymentObj(req,type){
         newPayment.customer= req.body.customer
     }
     if(req.body.receiptNumber) {
-        newPayment.approvedByAdmin = req.body.approvedByAdmin
+        newPayment.receiptNumber = req.body.approvedByAdmin
     }
     if(req.body.approvedByAdmin) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
