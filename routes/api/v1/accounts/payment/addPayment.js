@@ -146,9 +146,7 @@ async function getPaymentObj(req,type){
     if(req.body.date) {
         newPayment.date = req.body.date
     }
-    if(req.body.approvedByAdmin) {
-        newPayment.approvedByAdmin = req.body.approvedByAdmin
-    }
+    
 
 
 
