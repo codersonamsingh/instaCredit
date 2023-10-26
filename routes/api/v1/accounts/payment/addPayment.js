@@ -140,7 +140,7 @@ async function getPaymentObj(req,type){
     if(req.body.receiptNumber) {
         newPayment.receiptNumber = req.body.receiptNumber
     }
-    if(req.body.approvedByAdmin) {
+    if(req.body.designation) {
         newPayment.approvedByAdmin = req.body.approvedByAdmin
     }
     if(req.body.approvedByAdmin) {
