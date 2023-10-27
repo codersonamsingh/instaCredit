@@ -1,7 +1,7 @@
 //Read = 1. Get ALL Payment , 2. get one Payment by Id, 3. Search Payment with note or amount
 
 const express = require("express");
-const Payment = require("../../../../..");
+const Payment = require("../../../../../models/Payment");
 const router = express.Router();
 
 //@type Get
