@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PaymentSchema = new Schema({
-  company: {
+  Payment: {
     type: Schema.Types.ObjectId,
-    ref: "Company",
+    ref: "Payment",
     required: true,
   },
   amount: {
