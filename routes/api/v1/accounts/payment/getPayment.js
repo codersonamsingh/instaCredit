@@ -1,23 +1,23 @@
-//Read = 1. Get ALL Company , 2. get one Company by Id, 3. Search Company with note or amount
+//Read = 1. Get ALL Payment , 2. get one Payment by Id, 3. Search Payment with note or amount
 
 const express = require("express");
-const Company = require("../../../../../models/Company");
+const Payment = require("../../../../../models/Payment");
 const router = express.Router();
 
 //@type Get
-//@route /api/v1/account/Company/getCompany/getAll
-//@des get all  Company
+//@route /api/v1/account/Payment/getPayment/getAll
+//@des get all  Payment
 //@access public
 router.get("/getAll", async(req,res) => {
 
 try{ 
     
-    const getCompany = await Company.find()
+    const getPayment = await Payment.find()
 
 
      res.json({
-        data:getCompany,
-        message:"Company loaded",
+        data:getPayment,
+        message:"Payment loaded",
         varient:"success"
      })
 
@@ -32,19 +32,19 @@ try{
 })
 
 //@type Get
-//@route /api/v1/account/Company/getCompany/getOne/:id
-//@des get one Company
+//@route /api/v1/account/Payment/getPayment/getOne/:id
+//@des get one Payment
 //@access public
 router.get("/getOne/:id", async(req,res) => {
 
     try{ 
         
-        const getCompany = await Company.findById(req.params.id)
+        const getPayment = await Payment.findById(req.params.id)
     
     
          res.json({
-            data:getCompany,
-            message:"Company loaded",
+            data:getPayment,
+            message:"Payment loaded",
             varient:"success"
          })
     
@@ -59,8 +59,8 @@ router.get("/getOne/:id", async(req,res) => {
     })
 
 //@type Get search
-//@route /api/v1/account/Company/getCompany/search/:seachQuery
-//@des to search Company
+//@route /api/v1/account/Payment/getPayment/search/:seachQuery
+//@des to search Payment
 //@access public
 router.get("/search/:searchQuery", async(req,res) => {
 
@@ -68,7 +68,7 @@ router.get("/search/:searchQuery", async(req,res) => {
         
         const searchQuery = req.params.searchQuery
 
-        const getCompany = await Company.find({
+        const getPayment = await Payment.find({
             $or:[
                 {name: new RegExp(searchQuery, "i")},
                 {address: new RegExp(searchQuery, "i")},
@@ -77,8 +77,8 @@ router.get("/search/:searchQuery", async(req,res) => {
         })
     
          res.json({
-            data:getCompany,
-            message:"Company loaded",
+            data:getPayment,
+            message:"Payment loaded",
             varient:"success"
          })
     
