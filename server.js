@@ -13,8 +13,8 @@ const getAccount = require("./routes/api/v1/accounts/account/getAccount");
 const addCompany = require("./routes/api/v1/accounts/company/addCompany");
 const getCompany = require("./routes/api/v1/accounts/company/getCompany");
 const addLoan = require("./routes/api/v1/accounts/loan/addLoan");
-const getLoan = require("./routes/api/v1/accounts/loan/getLoan");paymant ad 
-const addPayment = require("./routes/api/v1/accounts/loan/add");
+const getLoan = require("./routes/api/v1/accounts/loan/getLoan");
+const addPayment = require("./routes/api/v1/accounts/payment");
 
 const app = express();
 app.use(upload({useTempfiles:true}))
