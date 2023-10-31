@@ -50,6 +50,8 @@ app.use("/api/v1/accounts/loan/getLoan",getLoan);
 app.use("/api/v1/accounts/loan/getLoan",getLoan);
 app.use("/api/v1/accounts/payment",addPayment);
 
+
+
 //data base connection
 const db = require("./setup/myurl").mongoURL;
 
