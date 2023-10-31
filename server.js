@@ -48,7 +48,7 @@ app.use("/api/v1/accounts/company/getCompany",getCompany);
 app.use("/api/v1/accounts/loan/addLoan",addLoan);
 app.use("/api/v1/accounts/loan/getLoan",getLoan);
 app.use("/api/v1/accounts/loan/getLoan",getLoan);
-app.use("/api/v1/accounts/payment",getLoan);
+app.use("/api/v1/accounts/payment",);
 
 //data base connection
 const db = require("./setup/myurl").mongoURL;
