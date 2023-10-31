@@ -49,7 +49,7 @@ app.use("/api/v1/accounts/loan/addLoan",addLoan);
 app.use("/api/v1/accounts/loan/getLoan",getLoan);
 app.use("/api/v1/accounts/loan/getLoan",getLoan);
 app.use("/api/v1/accounts/payment",addPayment);
-app.use("/api/v1/accounts/payment",addPayment);
+app.use("/api/v1/accounts/payment",Payment);
 
 
 
