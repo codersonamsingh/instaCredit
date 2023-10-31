@@ -15,7 +15,7 @@ const getCompany = require("./routes/api/v1/accounts/company/getCompany");
 const addLoan = require("./routes/api/v1/accounts/loan/addLoan");
 const getLoan = require("./routes/api/v1/accounts/loan/getLoan");
 const addPayment = require("./routes/api/v1/accounts/payment/addPayment");
-const Payment = require("./routes/api/v1/accounts/payment/addPayment");
+const getPayment = require("./routes/api/v1/accounts/payment/addPayment");
 
 
 
