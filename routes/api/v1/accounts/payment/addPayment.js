@@ -147,16 +147,6 @@ async function getPaymentObj(req,type){
         newPayment.date = req.body.date
     }
     
-
-
-
-
-
-
-
-
-     
-   
     return newPayment
 }
     
