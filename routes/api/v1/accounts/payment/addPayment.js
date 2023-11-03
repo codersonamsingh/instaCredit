@@ -40,7 +40,7 @@ router.post("/:id",async (req,res) => {
     try{
         constPaymentObj = await getPaymentObj(req,"update")
 
-        constPayment = awaitPayment.findOneAndUpdate(
+        constPayment = awaitP payment.findOneAndUpdate(
             {id:req.params.id},
             {$set:PaymentObj},
             {new:true}
